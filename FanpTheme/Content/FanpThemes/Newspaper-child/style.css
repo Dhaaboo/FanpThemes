@@ -1,0 +1,352 @@
+/*
+Theme Name:     Fanproj Productions Child
+Theme URI: 	http://fanproj.com
+Description:    Fanproj Child
+Author:         Fanproj Groups
+Author URI: 	http://fanproj.com/about-us/
+Template:       Fanproj                             
+Version:        2.1
+*/
+
+
+/*  ----------------------------------------------------------------------------
+	This file will load automatically when the child theme is active. You can use it
+	for custom CSS.
+*/
+
+
+
+.ultimate-layouts-container .ultimate-layouts-picture .ultimate-layouts-picture-wrap {
+	position: relative;
+	overflow: inherit;
+	margin-bottom: 15px;
+}
+
+.sticky_left {
+	position: fixed;
+	width: 0%;
+	left: 11.3%;
+	top: 17%;
+	border-top: 0;
+}
+
+.sticky_right {
+  position: fixed;
+  width: 100%;
+  right: -78.1%;
+  top: 20%;
+  border-top: 0;
+}
+
+.favorite_button {
+	margin-bottom: 0;
+	width: 100%;
+	background: black;
+	color: white;
+	padding: 9.5px;
+	border-radius: 4px;
+}
+
+.simplefavorite-button.has-count {
+	position: relative;
+	background: transparent;
+	border: 0px;
+	font-family: 'Abel';
+	font-size: 18px;
+}
+
+.td-post-featured-image {
+	position: absolute;
+	z-index: 999;
+	width: 20%;
+	display: inline-block;
+	padding: 20px;
+}
+
+.upcoming {
+	position: absolute;
+	left: -10.84%;
+	margin-top: -40.1%;
+	width: 13%;
+}
+
+.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.title {
+	color: #fff;
+	font-size: 25px;
+	/* margin: 10px 0 0 0; */
+	left: 13%;
+	top: -10%;
+	width: 70%;
+}
+
+.wpmoly.headbox.movie.poster {
+	background-color: rgba(0, 0, 0, 0.65);
+	border: 4px solid rgba(0, 0, 0, 0);
+	color: #ddd;
+	min-height: 350px;
+	padding: 8px 14px;
+}
+
+.wpmoly.headbox.movie.menu.hint {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.75rem;
+	height: 1.75em;
+	min-width: 15em;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: -2.75em;
+}
+
+.wpmoly.headbox.movie.content {
+	/* border: 4px solid rgba(255, 48, 48, 0); */
+	/* margin: -23px; */
+	/* top: -120px; */
+	/* background: none; */
+	color: aliceblue;
+	/* width: 87%; */
+	/* left: 13%; */
+}
+
+.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.subtitle {
+	color: #ddd;
+	font-size: 14px;
+	margin: 0;
+	left: 22%;
+}
+
+.wpmoly.headbox.movie.content.tab {
+	padding-left: 0;
+	padding-right: 0;
+	width: 79%;
+	margin: -27%;
+	left: 47%;
+}
+
+.td-post-featured-image .wp-caption-text {
+	margin-bottom: 26px;
+	z-index: 1;
+	display: none;
+}
+
+.widget .wpmoly.movies > .wpmoly.movie > .wpmoly.movie {
+	display: inline-table;
+	margin-bottom: 6px;
+	max-width: 160px;
+	min-width: 0px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 49.5%;
+}
+
+.wpmoly.headbox.movie.content.tab {
+	text-overflow: ellipsis;
+		word-wrap: break-word;
+		overflow: hidden;
+		max-height: 11.2em;
+		line-height: 1.3em;
+}
+
+@media (min-width: 1019px) and (max-width: 1099px) {
+	.wpmoly.headbox.movie.content.tab {
+		padding-left: 0;
+		padding-right: 0;
+		width: 79%;
+		margin: -30%;
+		left: 50%;
+	}
+}
+
+@media (max-width: 1100px) {
+	.wpmoly.headbox.movie.content.tab {
+		padding-left: 0;
+		padding-right: 0;
+		width: 79%;
+		margin: -30%;
+		left: 50%;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.wpmoly.headbox.movie.content.tab {
+		padding-left: 0;
+		padding-right: 0;
+		width: 79%;
+		margin: -42%;
+		left: 60%;
+	}
+}
+
+@media (max-width: 1018px) {
+	.wpmoly.headbox.movie.content.tab {
+		padding-left: 0;
+		padding-right: 0;
+		width: 79%;
+		margin: -42%;
+		left: 60%;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		overflow: hidden;
+		max-height: 11.2em;
+		line-height: 1.3em;
+}
+
+@media (max-width: 767px) and (min-width: 630px) {
+	.wpmoly.headbox.movie.content.tab {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		margin: -44%;
+		left: 45%;
+	}
+	
+	.td-post-featured-image {
+		position: absolute;
+		z-index: 999;
+		width: 20%;
+		padding: 20px;
+		display: none;
+	}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.title {
+		color: #fff;
+		font-size: 25px;
+		left: 1%;
+		top: -10%;
+	}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.subtitle {
+		color: #ddd;
+		font-size: 14px;
+		margin: 0;
+		left: 2%;
+	}
+
+
+	.block-title a, .block-title span, .block-title strong, .block-title label {
+		margin-top: 10px;
+	}
+
+	.wpmoly.shortcode.movie {
+		
+		float: none !important;
+		height: auto !important;
+		margin: 0 auto 15px !important;
+		max-width: 380px;
+		width: auto !important;
+	}
+	.wpb_wrapper .wpmoly.shortcode.movie .poster img {
+		height: auto !important;
+	}
+
+	
+	.wpmoly.detail.rating {
+		float: right;
+	}
+
+}
+
+@media (max-width: 629px) and (min-width: 390px) {
+	.wpmoly.headbox.movie.content.tab {
+		display: none;
+	}
+
+	.wpmoly.headbox.movie.details-3 {
+	display: none;
+	}
+
+	.td-post-featured-image {
+		z-index: 999;
+		width: 35%;
+		position: absolute;
+		padding: 20px;
+	}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.subtitle {
+		color: #ddd;
+		font-size: 14px;
+		margin: 0;
+		left: 34%;
+		width: 70%;
+	}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.title {
+		color: #fff;
+		font-size: 25px;
+		left: 20%;
+		top: -10%;
+	}
+}
+
+@media (max-width: 389px) and (min-width: 270px) {
+	.td-post-featured-image {
+		display: none;
+	}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.details-2 {
+	display: none;
+	}
+
+	.wpmoly.headbox.movie.menu.hint {
+		display: none;
+	}
+
+	.wpmoly.headbox.movie.content.tab {
+		display: none;
+	}
+
+	.wpmoly.headbox.movie.details-3 {
+	display: none;
+	}
+	
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.title {
+		color: #fff;
+		font-size: 25px;
+		}
+
+	.wpmoly.headbox.movie.poster .wpmoly.headbox.movie.subtitle {
+		color: #ddd;
+		font-size: 14px;
+	text-align: center;
+		left: 0;
+		}
+	
+	.wpmoly.headbox {
+		background-color: transparent;
+		background-position: center 0px;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		clear: both;
+		/* position: relative; */
+	}
+
+	.wpmoly.headbox.movie.menu {
+		bottom: 2px;
+		position: absolute;
+		right: 16px;
+		display: none;
+	}
+
+}
+
+.td_block_template_14 .td-block-title {
+	margin-top: 0;
+	margin-bottom: 9px;
+	padding: 11px 0;
+	line-height: 1;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	background-color: #111;
+	border: 1px solid transparent;
+}
+
+.td-post-content img,
+.wpb_text_column img,
+.td_block_text_with_title img,
+.woocommerce #tab-description img,
+.mce-content-body img {
+  margin-bottom: 0px;
+}

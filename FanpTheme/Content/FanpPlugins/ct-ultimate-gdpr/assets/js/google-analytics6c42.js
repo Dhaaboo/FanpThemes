@@ -1,0 +1,1 @@
+window['ga-disable-'+ct_ultimate_gdpr_service_google_analytics.id]=true;

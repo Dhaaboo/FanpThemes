@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+SC:|Alegreya+Sans+SC:|Almendra:|Audiowide|Hind:&amp;subset=latin-ext,latin,vietnamese,devanagari' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Hind%3A400%7CAbel%3A400%7COpen+Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&amp;ver=9.2.2' type='text/css' media='all' />
+    <link rel="stylesheet" href="~/Content/FanpThemes/Fanproj/style5adb.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Content/FanpThemes/Newspaper-child/style5adb.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Content/FapCss/SiteFanp.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Content/FanpPlugins/ultimate-layouts-vc/assets/front-end/fontawesome/css/font-awesome.min3601.css" type="text/css" media="all" />
+    <script type="text/javascript">
+        (function () {
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+            if (navigator.userAgent.indexOf("MSIE 10.0") > -1) {
+                htmlTag.className += ' ie10';
+            }
+
+            if (!!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                htmlTag.className += ' ie11';
+            }
+
+            if (navigator.userAgent.indexOf("Edge") > -1) {
+                htmlTag.className += ' ieEdge';
+            }
+
+            if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if (user_agent.indexOf("android") > -1) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if (-1 !== navigator.userAgent.indexOf('Mac OS X')) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) {
+                htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if (-1 !== navigator.userAgent.indexOf('Firefox')) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if (-1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome')) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+            if (-1 !== navigator.userAgent.indexOf('IEMobile')) {
+                htmlTag.className += ' td-md-is-iemobile';
+            }
+
+        })();
+    </script>
+</head>
+<body class="home page-template-default page page-id-7379 front-page global-block-template-14 td-blog-beauty wpb-js-composer js-comp-ver-6.1 vc_responsive td-animation-stack-type1 td-full-layout" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+    <div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+    @Html.Partial("FaanpTheme/_MobileTheme")
+    <div id="td-outer-wrap" class="td-theme-wrap">
+        @Html.Partial("_headerMenu")
+        <div class="td-main-content-wrap td-main-page-wrap td-container-wrap">
+            <div class="td-container tdc-content-wrap">
+                @RenderBody()
+            </div>
+        </div>
+        @Html.Partial("FaanpTheme/_footerTheme")
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Content/Includes/js/jquery/jquery-migrate.min330a.js"  type="text/javascript"></script>
+    <script src="~/Content/FanpThemes/Fanproj/js/tagdiv_theme.mind440.js" type="text/javascript"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

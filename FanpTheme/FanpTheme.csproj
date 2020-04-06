@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BECD1E48-FC0F-41B1-AABB-2FDBB05D08AF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FanpTheme</RootNamespace>
+    <AssemblyName>FanpTheme</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44376</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\FanpPlugins\bwp-minify\min\index8f2d.html" />
+    <Content Include="Content\FanpPlugins\bwp-minify\min\index8fdb.html" />
+    <Content Include="Content\FanpPlugins\bwp-minify\min\indexc682.html" />
+    <Content Include="Content\FanpPlugins\bwp-minify\min\indexe27f.html" />
+    <Content Include="Content\FanpPlugins\bwp-minify\min\indexf087.html" />
+    <Content Include="Content\FanpPlugins\contact-form-7\images\ajax-loader.gif" />
+    <Content Include="Content\FanpPlugins\contact-form-7\includes\js\scripts1748.js" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\cookie-popup.min6c42.css" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\dosis\Dosis-Regular.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\hind\Hind-Regular.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Bold.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Medium.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Regular.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-SemiBold.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\open-sans\OpenSans-Bold.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\open-sans\OpenSans-Regular.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\Cookie-pop-up-black.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\Cookie-pop-up-blue.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\Cookie-pop-up-white.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\cookie-popup-wibele-blue-black-bg.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\cookie-popup-wibele-white-bg.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\icons8_Delete_1.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\skin2-adv.svg" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\skin2-ana.svg" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\skin2-ess.svg" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\skin2-func.svg" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_444444_256x240.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_555555_256x240.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_777620_256x240.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_777777_256x240.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_cc0000_256x240.html" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\jquery-ui.min6c42.css" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\style.min3e0d.css" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\js\cookie-popup.min3e0d.js" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\js\google-analytics6c42.js" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\js\jquery.base64.min3e0d.js" />
+    <Content Include="Content\FanpPlugins\favorites\assets\css\favorites784e.css" />
+    <Content Include="Content\FanpPlugins\favorites\assets\js\favorites.min784e.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\admin\assets\images\close_bk.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\css\font-awesome6c42.css" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\css\select2.min6c42.css" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\css\style6c42.css" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\css\templates6c42.css" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfonte0a5.html" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\file-icon.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\lockers\lock_1.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\lockers\lock_3.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\lockers\lock_4.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\lockers\lock_5.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\lockers\lock_6.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\no-avatar.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\top_aff_bk_1.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\top_aff_bk_2.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\images\top_aff_bk_3.png" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\functions.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\iziModal.min.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\jquery-ui.min.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\jquery.form.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\jquery.uploadfile.min.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\printThis.js" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\js\select2.min.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\css\js_composer.min9b2d.css" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\flickr.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\address-book.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\alarm-clock.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\anchor.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\application-image.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\arrow.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\asterisk.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\auction-hammer.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\balloon-buzz.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\balloon-facebook.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\balloon-twitter.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\balloon.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\battery-full.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\binocular.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-excel.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-image.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-music.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-office.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-pdf.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-powerpoint.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\blue-document-word.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\bookmark.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\camcorder.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\camera.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\chart-pie.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\chart.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\clock.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\control.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\fire.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\heart.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\mail.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\plus-shield.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\icons\video.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\spinner.gif" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\toggle_close.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\images\toggle_open.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\js\dist\js_composer_front.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400.html" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400.html" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900.html" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\nivoslider\jquery.nivo.slider.pack9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\nivoslider\themes\default\arrows.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\nivoslider\themes\default\bullets.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\nivoslider\themes\default\default.min9b2d.css" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\nivoslider\themes\default\loading.gif" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\skrollr\dist\skrollr.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\vc-tta-autoplay\vc-tta-autoplay.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\vc_accordion\vc-accordion.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\vc_tabs\vc-tabs.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\vc_waypoints\vc-waypoints.min9b2d.js" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\alert.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\blur.svg" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\exclamation.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\info.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\remove.png" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\vc\tick.png" />
+    <Content Include="Content\FanpPlugins\testim\files\css\font-awesome.min6c42.css" />
+    <Content Include="Content\FanpPlugins\testim\files\css\owl.carousel6c42.css" />
+    <Content Include="Content\FanpPlugins\testim\files\css\owl.video.play.html" />
+    <Content Include="Content\FanpPlugins\testim\files\css\style6c42.css" />
+    <Content Include="Content\FanpPlugins\testim\files\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="Content\FanpPlugins\testim\files\images\dropdown_arrow.png" />
+    <Content Include="Content\FanpPlugins\testim\files\images\indeed-logo.png" />
+    <Content Include="Content\FanpPlugins\testim\files\images\s_star.png" />
+    <Content Include="Content\FanpPlugins\testim\files\images\u_star.png" />
+    <Content Include="Content\FanpPlugins\testim\files\js\front_end.js" />
+    <Content Include="Content\FanpPlugins\testim\files\js\functions.js" />
+    <Content Include="Content\FanpPlugins\testim\files\js\isotope.pkgd.min.js" />
+    <Content Include="Content\FanpPlugins\testim\files\js\owl.carousel.js" />
+    <Content Include="Content\FanpPlugins\testim\layouts\style_f1505b.css" />
+    <Content Include="Content\FanpPlugins\testim\themes\theme_10\quotes2.png" />
+    <Content Include="Content\FanpPlugins\testim\themes\theme_10\style.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\animate3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\core-min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\core3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\css\font-awesome.min3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\hover-css\hover3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\imagesloaded.pkgd.min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\lazysizes3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\loaders3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\malihuscroll\jquery.mCustomScrollbar.concat.min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\malihuscroll\jquery.mCustomScrollbar.min3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\malihuscroll\mCSB_buttons.html" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\masonry.pkgd.min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\pagination\pagination.min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\pagination\pagination3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\priority-navigation\priority-nav-core3601.css" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\slick\slick.clones.min3601.js" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\slick\slick3601.css" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\css\fonts\ult-silk.svg" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\css\icons225e.css" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\ult-vid-cntrl33ac.svg" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\vidcons6c42.css" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\images\cover.jpg" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\images\fabric.png" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\img\cross.png" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\img\ov-plus.png" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\ajax-loader.gif" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\background-style.min225e.css" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\slick.svg" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\ult-silk.svg" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\ultimate.min225e.css" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\custom.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\jparallax.min6c42.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\jquery-appear.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\jquery-ui-labeledslider.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\jquery-ui.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\mb-YTPlayer.min6c42.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\modal-all.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\modernizr-custom.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\ultimate.min225e.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\ultimate_bg.min6c42.js" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-js\vhparallax.min6c42.js" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\css\public\wpmoly-flags65c9.css" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\css\public\wpmoly65c9.css" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\fonts\wpmovielibrarybea6.svg" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\style65c9.css" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\img\flags.png" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\js\public\wpmoly65c9.js" />
+    <Content Include="Content\FanpThemes\Fanproj\demos_popup\demos-popup1bce.html" />
+    <Content Include="Content\FanpThemes\Fanproj\demos_popup\new-badge.html" />
+    <Content Include="Content\FanpThemes\Fanproj\images\flags\flags.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\ico-video-large.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper-iconsc4ca.svg" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper9bf3.svg" />
+    <Content Include="Content\FanpThemes\Fanproj\images\no-thumb\td_meta_replacement.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\elements%402x.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\elements.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\broken-clouds-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\broken-clouds-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\clear-sky-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\clear-sky-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\few-clouds-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\few-clouds-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\mist.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\rain-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\rain-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\scattered-clouds-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\scattered-clouds-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\shower-rain-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\shower-rain-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\snow-d.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\snow-n.png" />
+    <Content Include="Content\FanpThemes\Fanproj\images\sprite\weather\thunderstorm.png" />
+    <Content Include="Content\FanpThemes\Fanproj\js\tagdiv_theme.mind440.js" />
+    <Content Include="Content\FanpThemes\Fanproj\style5adb.css" />
+    <Content Include="Content\FanpThemes\Newspaper-child\style.css" />
+    <Content Include="Content\FanpThemes\Newspaper-child\style5adb.css" />
+    <Content Include="Content\FapCss\SiteFanp.css" />
+    <Content Include="Content\Includes\css\dashicons.min6c42.css" />
+    <Content Include="Content\Includes\js\comment-reply.min6c42.js" />
+    <Content Include="Content\Includes\js\imagesloaded.min55a0.js" />
+    <Content Include="Content\Includes\js\jquery\jquery-migrate.min330a.js" />
+    <Content Include="Content\Includes\js\jquery\jqueryb8ff.js" />
+    <Content Include="Content\Includes\js\jquery\ui\core.mine899.js" />
+    <Content Include="Content\Includes\js\jquery\ui\datepicker.mine899.js" />
+    <Content Include="Content\Includes\js\jquery\ui\mouse.mine899.js" />
+    <Content Include="Content\Includes\js\jquery\ui\slider.mine899.js" />
+    <Content Include="Content\Includes\js\jquery\ui\widget.mine899.js" />
+    <Content Include="Content\Includes\js\masonry.mind617.js" />
+    <Content Include="Content\Includes\js\wp-embed.min6c42.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="htmlTests\index.html" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\dosis\Dosis-Regular.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\hind\Hind-Regular.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Bold.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Medium.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-Regular.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\montserrat\Montserrat-SemiBold.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\open-sans\OpenSans-Bold.woff" />
+    <Content Include="Content\FanpPlugins\ct-ultimate-gdpr\assets\css\fonts\open-sans\OpenSans-Regular.woff" />
+    <Content Include="Content\FanpPlugins\favorites\assets\css\fonts\favorites.eot" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Content\FanpPlugins\indeed-membership-pro\assets\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.ttf" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_grid\vc_grid_v1d41d.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.ttf" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\FanpPlugins\js_composer\assets\lib\bower\font-awesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="Content\FanpPlugins\testim\files\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="Content\FanpPlugins\testim\files\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="Content\FanpPlugins\testim\files\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="Content\FanpPlugins\testim\files\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\FanpPlugins\ultimate-layouts-vc\assets\front-end\fontawesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\css\fonts\ult-silk.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\css\fonts\ult-silk.ttf" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\css\fonts\ult-silk.woff" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\ult-vid-cntrl33ac.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\ult-vid-cntrl33ac.ttf" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\ult-vid-cntrl33ac.woff" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\fonts\ult-vid-cntrld41d.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\slick.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\slick.ttf" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\slick.woff" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\slickd41d.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\ult-silk.eot" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\ult-silk.ttf" />
+    <Content Include="Content\FanpPlugins\Ultimate_VC_Addons\assets\min-css\fonts\ult-silk.woff" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\fonts\wpmovielibrarybea6.eot" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\fonts\wpmovielibrarybea6.ttf" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\fonts\wpmovielibrarybea6.woff" />
+    <Content Include="Content\FanpPlugins\wpmovielibrary\assets\fonts\wpmovielibrary\fonts\wpmovielibraryd41d.eot" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper-iconsc4ca.eot" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper-iconsc4ca.ttf" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper-iconsc4ca.woff" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper9bf3.eot" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper9bf3.ttf" />
+    <Content Include="Content\FanpThemes\Fanproj\images\icons\newspaper9bf3.woff" />
+    <Content Include="Content\Includes\fonts\dashicons.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Shared\FaanpTheme\_footerTheme.cshtml" />
+    <Content Include="Views\Shared\FaanpTheme\_MobileTheme.cshtml" />
+    <Content Include="Views\Shared\_headerMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62782</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44376/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
